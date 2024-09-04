@@ -1,4 +1,6 @@
 ---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 import '../styles/global.css';
 
 const pageTitle = 'Rainblog'
@@ -13,9 +15,7 @@ const pageTitle = 'Rainblog'
 		<title>{pageTitle}</title>
 	</head>
 	<body>
-		<a href="/">Home</a>
-        <a href="/about/">About</a>
-        <a href="/blog/">Rainblog</a>
+		<Header />
 
 		
 		<h1>{pageTitle}</h1>
@@ -26,5 +26,9 @@ const pageTitle = 'Rainblog'
             <li><a href="/posts/RB-2/">RB 2</a></li>
             <li><a href="/posts/RB-3/">RB 3</a></li>
         </ul>
+        <Footer />
+        <script>
+			import "../scripts/menu.js";
+		</script>
 	</body>
 </html>
