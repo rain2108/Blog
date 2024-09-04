@@ -1,7 +1,5 @@
 ---
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import '../styles/global.css'
+import BaseLayout from '../layouts/BaseLayout.astro';
 
 const pageTitle = "About Rainblog";
 const identity = {
@@ -42,9 +40,9 @@ const textCase = "uppercase";
         </style>
 	</head>
 	<body>
-        <Header />
+        
 
-
+        <BaseLayout>
             <h1>{pageTitle}</h1>
             
             <p>
@@ -68,9 +66,6 @@ const textCase = "uppercase";
             {finished && <p>I finished this tutorial!</p>}
 
             {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
-        <Footer />
-        <script>
-			import "../scripts/menu.js";
-		</script>
+        </BaseLayout>
 	</body>
 </html>
