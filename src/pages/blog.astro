@@ -1,5 +1,7 @@
 ---
+import '../styles/global.css';
 
+const pageTitle = 'Rainblog'
 ---
 
 <html lang="en">
@@ -8,7 +10,7 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Rainblog</title>
+		<title>{pageTitle}</title>
 	</head>
 	<body>
 		<a href="/">Home</a>
@@ -16,6 +18,13 @@
         <a href="/blog/">Rainblog</a>
 
 		
-		<h1>Welcome to mah blog bich</h1>
+		<h1>{pageTitle}</h1>
+
+
+        <ul>
+            <li><a href="/posts/RB-1/">RB 1</a></li>
+            <li><a href="/posts/RB-2/">RB 2</a></li>
+            <li><a href="/posts/RB-3/">RB 3</a></li>
+        </ul>
 	</body>
 </html>
